@@ -12,15 +12,25 @@ The Nginx container handles incoming HTTP requests and routes them based on the 
 ## 📁 Project Structure
 
 project-root/
+
 │ 
+
 ├── docker-compose.yml 
+
 ├── nginx/ 
+
 │ ├── nginx.conf
+
 │ └── Dockerfile 
+
 ├── service_1/ ← Golang app │ 
+
    └── Dockerfile 
+   
 ├── service_2/ ← Python app │ 
+
    └── Dockerfile 
+   
 └── README.md
 
 
@@ -29,7 +39,8 @@ project-root/
 ## 🚀 Setup & Execution
 
 ### Prerequisites
-Ensure you have the following installed:
+
+  Installations:
 
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
@@ -53,23 +64,25 @@ Ensure you have the following installed:
 
       http://localhost:8080/service2
 
-⚙️ How It Works
+### ⚙️ How It Works
 
-Nginx listens on port 8080 and routes:
+. Nginx listens on port 8080 and routes:
 
-/service1 → Golang service
+      /service1 → Golang service
 
-/service2 → Python service
+      /service2 → Python service
 
-Each service runs in its own isolated container, using bridge networking.
+. Each service runs in its own isolated container, using bridge networking.
 
-Nginx logs incoming requests with timestamps and routes.
+. Nginx logs incoming requests with timestamps and routes.
 
-🩺 Health Checks
+
+### 🩺 Health Checks
 
 Both services are configured with basic health checks using curl to ensure availability and reliability during runtime.
 
-🔍 Logs
+
+### 🔍 Logs
 
 Check access logs for requests routed through Nginx:
 
