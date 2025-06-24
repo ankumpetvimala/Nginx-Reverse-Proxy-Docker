@@ -15,21 +15,21 @@ project-root/
 
 │ 
 
-├── docker-compose.yml 
+   ├── docker-compose.yml 
 
-├── nginx/ 
+   ├── nginx/ 
 
-│ ├── nginx.conf
+        ├── nginx.conf
 
-│ └── Dockerfile 
+         └── Dockerfile 
 
-├── service_1/ ← Golang app │ 
+   ├── service_1/ ← Golang app │ 
 
-   └── Dockerfile 
+         └── Dockerfile 
    
-├── service_2/ ← Python app │ 
+   ├── service_2/ ← Python app │ 
 
-   └── Dockerfile 
+         └── Dockerfile 
    
 └── README.md
 
