@@ -11,7 +11,17 @@ The Nginx container handles incoming HTTP requests and routes them based on the 
 
 ## 📁 Project Structure
 
-project-root/ │ ├── docker-compose.yml ├── nginx/ │ ├── nginx.conf │ └── Dockerfile ├── service_1/ ← Golang app │ └── Dockerfile ├── service_2/ ← Python app │ └── Dockerfile └── README.md
+project-root/
+│ 
+├── docker-compose.yml 
+├── nginx/ 
+│ ├── nginx.conf
+│ └── Dockerfile 
+├── service_1/ ← Golang app │ 
+   └── Dockerfile 
+├── service_2/ ← Python app │ 
+   └── Dockerfile 
+└── README.md
 
 
 ---
@@ -28,20 +38,23 @@ Ensure you have the following installed:
 ### Steps to Run
 
 1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
-Build and start all services:
+   
+      git clone https://github.com/your-username/your-repo-name.git
+   
+      cd your-repo-name
+   
+2. Build and start all services:
 
-bash
-docker-compose up --build
-Access services via your browser:
+      docker-compose up --build
 
-http://localhost:8080/service1
+3. Access services via your browser:
 
-http://localhost:8080/service2
+      http://localhost:8080/service1
+
+      http://localhost:8080/service2
 
 ⚙️ How It Works
+
 Nginx listens on port 8080 and routes:
 
 /service1 → Golang service
@@ -53,10 +66,12 @@ Each service runs in its own isolated container, using bridge networking.
 Nginx logs incoming requests with timestamps and routes.
 
 🩺 Health Checks
+
 Both services are configured with basic health checks using curl to ensure availability and reliability during runtime.
 
 🔍 Logs
+
 Check access logs for requests routed through Nginx:
 
-bash
 docker-compose exec nginx cat /var/log/nginx/access.log
+
