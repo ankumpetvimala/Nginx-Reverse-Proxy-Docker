@@ -1,0 +1,13 @@
+# Ignore system-wide directories
+AppData/
+Documents/
+*.log
+*.tmp
+*.swp
+
+# Ignore everything except your project files
+!service_1/
+!service_2/
+!nginx/
+!docker-compose.yml
+!README.md
